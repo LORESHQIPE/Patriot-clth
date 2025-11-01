@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>https://Patriot.com</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+    /* Reset e stile generale */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+      color: #f2f2f2;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(20, 20, 20, 0.7);
+      backdrop-filter: blur(10px);
+      transition: background 0.4s ease;
+    }
+
+    header.scrolled {
+      background: rgba(10, 10, 10, 0.95);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #00bcd4;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f2f2f2;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    /* Sezione Hero */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: radial-gradient(circle at center, #121212, #000);
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: #ccc;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background: #00bcd4;
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #0097a7;
+    }
+
+    /* Sezione Progetti */
+    .projects {
+      padding: 6rem 2rem;
+      text-align: center;
+      background: #111;
+    }
+
+    .projects h2 {
+      font-size: 2.5rem;
+      color: #00bcd4;
+      margin-bottom: 3rem;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 0 3rem;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(0, 188, 212, 0.3);
+    }
+
+    .project-card h3 {
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .project-card p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    /* Sezione Contatti */
+    .contact {
+      padding: 6rem 2rem;
+      background: linear-gradient(135deg, #0a0a0a, #141414);
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2.5rem;
+      color: #00bcd4;
+      margin-bottom: 2rem;
+    }
+
+    .contact p {
+      color: #bbb;
+      margin-bottom: 2rem;
+    }
+
+    .contact a {
+      color: #00bcd4;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer {
+      background: #080808;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    footer a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="navbar">
+    <div class="logo">Patriot</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#progetti">Progetti</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div>
+      <h1>Innovazione con Stile</h1>
+      <p>Soluzioni digitali di lusso per aziende visionarie.</p>
+      <a href="#progetti" class="btn">Scopri i Progetti</a>
+    </div>
+  </section>
+
+  <section id="progetti" class="projects">
+    <h2>Progetti in Evidenza</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Patriot Studio</h3>
+        <p>Un portale per designer e brand premium, con interfaccia 3D e animazioni fluide.</p>
+      </div>
+      <div class="project-card">
+        <h3>Smart Commerce</h3>
+        <p>Piattaforma eCommerce personalizzata per marchi di lusso con IA integrata.</p>
+      </div>
+      <div class="project-card">
+        <h3>NextVision Web</h3>
+        <p>Landing page futuristica con effetti di parallasse e microinterazioni di alto livello.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contatti" class="contact">
+    <h2>Contattaci</h2>
+    <p>Vuoi un sito esclusivo per il tuo brand? Scrivici e costruiremo insieme il tuo futuro digitale.</p>
+    <p>Email: <a href="mailto:assistenzaptriot@gmail.com">assistenzapatriot@gmail.com</a></p>
+  </section>
+
+  <footer>
+    © 2025 Patriot — Realizzato con stile e innovazione.
+  </footer>
+
+  <script>
+    // Effetto cambio colore navbar allo scroll
+    window.addEventListener("scroll", () => {
+      const nav = document.getElementById("navbar");
+      if (window.scrollY > 60) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+</body>
+</html>
